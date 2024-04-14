@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Side Navigation Styles */
+  .side-nav {
+    background-color: #ddffd8;
+    color: #ca4848;
+    height: 100vh;  /* Set full viewport height */
+    min-width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    padding: 20px;
+  }
+  
+  .side-nav.show {  /* Style for open sidebar (optional)  */
+    left: -250px;  /* Move sidebar off-screen */
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  /* Make logo a circle */
+    margin-bottom: 20px;
+  }
+  
+  /* Navigation Link Styles */
+  .nav-link {
+    color: inherit;  /* Inherit color from parent */
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);  /* Light border */
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.05);  /* Slight hover background */
+  }
+  
+  .nav-link.active {
+    font-weight: bold;  /* Bold active link */
+  }
+  
+  /* Main Content Styles */
+  .main-container {
+    background-color: #f2f2f2;  /* Light background for main content */
+    padding: 20px;
+    min-height: 100vh;  /* Set full viewport height */
+    margin-left: 250px;  /* Match sidebar width */
+    transition: 0.3s;
+  }
+  
+  .main-container.show {  /* Style for open sidebar (optional)  */
+    margin-left: 0;  /* Move content next to sidebar */
+    background-color: #ca4848;
+  }
+  
+  /* Media Queries (Optional) */
+  @media (max-width: 768px) {
+    .side-nav {  /* Adjust sidebar for smaller screens (optional) */
+      position: absolute;  /* Remove fixed positioning */
+      width: 100%;  /* Take full width */
+      left: 0;  /* Align to left edge */
+      top: 0;  /* Align to top */
+      transition: none;  /* Disable transition for faster toggle */
+    }
+  
+    .side-nav.show {  /* Style for open sidebar on small screens */
+      left: 0;  /* Keep sidebar visible */
+    }
+  
+    .main-container {  /* Adjust main content for smaller screens */
+      margin-left: 0;  /* No margin needed */
+    }
+  }
+  

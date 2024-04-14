@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Kufi Arabic", sans-serif;
+
+
+}
+.side-nav{
+    background-color: #ddffd8;
+    color: #ca4848;
+    height: 100%;
+    min-width: 250px;
+    position: fixed;
+    top: 0;
+    /* left: -250px; */
+    left: 0;
+}
+
+.main-container{
+        margin-left: 250px;
+}
+
+.logo{
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+/* .main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 35vh;
+}
+.autisem-top{
+    
+    color: white;
+    object-fit: cover;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    position: relative;
+    z-index: 1;
+
+}
+.autism{
+    width: 100%;
+    /* filter: blur(2px); */
+    filter:    brightness(50%);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.firstsection{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.statistics{
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    width: 40%;
+    font-size: 2vh;
+    border: rgb(56, 56, 56);
+    border-radius: 10px;
+    height: 20vh;
+    border: rgb(56, 56, 56) solid 2px;
+
+}
+.asking{
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    width:100%;
+    font-size: 2vh;
+    border: black solid 2px ;
+    border-radius: 10px;
+    height: 20vh;
+    align-items: center;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center ; 
+
+}
+section div{
+    margin: .5%;
+}
+i{
+    font-size: 40px;
+}
+
+p{
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+
+.links{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    border-radius: 10px;
+    border: 1px black solid; 
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.links-text{
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    /* margin-bottom: 8px; */
+    text-align: center;
+}
+.videosborder{
+    border: 1px gray solid;
+    border-radius: 20px;
+    width: 200px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.link-container{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    flex-direction: column;
+
+}
+a{
+ list-style: none;
+ text-decoration: none;
+ color: black;
+
+}
+.links:hover{
+    color:rgb(0, 67, 2) ;
+    background-color: rgb(222, 255, 224);
+    transition: 0.5s;
+
+}
+.VideosContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    justify-content: center;
+    align-content: center;
+    padding: 5%;
+    
+
+}
+.VideosContainer p {
+    width: 50%;
+    text-align: center;
+}
+.VideosContainer img {
+    width: 300px;
+    height: 300px;
+    border: black solid 1px;
+    border-radius: 15px;
+
+}
+.VideosContainer img:hover{
+    border: solid .5px rgba(0, 250, 12, 0.6);
+    background-color: rgb(137, 255, 143);
+}
+.VideosContainer div {
+    place-items: center;
+    display: grid;
+}
