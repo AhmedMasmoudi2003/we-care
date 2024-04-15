@@ -15,20 +15,187 @@
 
 <body>
     <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .side-nav {
+            width: 250px;
+            background-color: #fff;
+            /* color: #2e2e2e; */
+            color: #2b2b2b;
+            height: 100vh;
+            /* Full height of viewport */
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+            /* Enable scrolling if needed */
+        }
+
+        .logo-container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .slogan {
+            font-size: 16px;
+            font-weight: bold;
+
+        }
+
+        .nav-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 15px 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2b2b2b;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #13c200;
+            /* Change color on hover */
+        }
+
+        .main-container {
+            margin-left: 250px;
+            /* Same as side-nav width */
+        }
+
+        hr {
+            color: #2b2b2b;
+            width: 85%;
+            margin: 0 auto;
+            /* width: 2px !important; */
+        }
+    </style>
+    <style>
+        /* Add this CSS to your existing styles.css */
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(100% - 40px);
+            /* Width of each card, minus space between them */
+            margin-bottom: 20px;
+            margin: 5px auto;
+            /* Space between cards */
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+
+            padding: 10px;
+            /* Padding for content inside the card */
+        }
+
+        .dev-image {
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            /* margin-right: 15px; */
+        }
+
+        .dev-info {
+            flex: 1;
+        }
+
+        .card-title {
+            font-size: 12px;
+            color: #333;
+            /* margin-bottom: 5px; */
+        }
+
+        .card-subtitle {
+            font-size: 10px;
+            color: #777;
+        }
+        .dev-by{
+            text-align: center;
+            margin-top: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
     </style>
     <nav class="side-nav">
-
-        <img src="logo.jpeg" class="logo" alt="We Care">
-        <ul>
+        <div class="logo-container">
+            <img src="logo.jpeg" class="logo" alt="Wa3ini">
+            <h1 class="slogan">WA3INI</h1>
+        </div>
+        <hr>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">category 1</a></li>
-            <li><a href="services.html">category 2</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="category1.html">Autisme</a></li>
+            <li><a href="category2.html">Handicap moteur</a></li>
+            <li><a href="donate.html">Handicap visuel</a></li>
+            <li><a href="contact.html">Handicap auditif</a></li>
+            <li><a href="donate.html">handicap mental</a></li>
+            <hr>
 
-        </ul>
+            <li><a href="donate.html">Our Partners</a></li>
+            <li><a href="donate.html">Contact US</a></li>
+            <li><a href="donate.html">Donate!</a></li>
+
+        </ul><hr><h2 class="dev-by">Developped by</h2>
+        <div class="devs">
+            <div class="card">
+                <div class="card-content">
+                    <img src="images/ahmed_mas___.png" alt="Person 1" class="dev-image">
+                    <div class="dev-info">
+                        <h2 class="card-title">Ahmed Masmoudi</h2>
+                        <p class="card-subtitle">developper</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <img src="images/youssef.jpg" alt="Person 3" class="dev-image">
+                    <div class="dev-info">
+                        <h2 class="card-title">Youssef neji</h2>
+                        <p class="card-subtitle">developper</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="images/aziz1.jpg" alt="Person 2" class="dev-image">
+                    <div class="dev-info">
+                        <h2 class="card-title">Aziz Mesfar</h2>
+                        <p class="card-subtitle">Content manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </nav>
-
     <div class="main-container">
         <header class="autisem-top">
 
@@ -157,36 +324,6 @@
                 </section>
             </a>
         </main>
-
-
-
-
-
-
-    
-
-
-
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        
-        (function () { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://wa3ini.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript></div>
 </body>
 
 </html>

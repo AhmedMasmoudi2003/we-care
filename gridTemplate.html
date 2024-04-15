@@ -15,18 +15,237 @@
 
 <body>
     <style>
+        .firstsection {
+            margin: 20px 0;
+            /* Add some margin for spacing */
+        }
 
+        .VideosContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* Adjust min-width as needed */
+            gap: 20px;
+            /* Adjust spacing between cards */
+        }
+
+        .videosbox {
+            background-color: #fff;
+            /* Background color for each card */
+            border-radius: 8px;
+            /* Rounded corners for cards */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+            text-align: center;
+            padding: 15px;
+        }
+
+        .videosbox a {
+            display: block;
+            /* Make the link take up the full width of the card */
+        }
+
+        .videosbox img {
+            width: 100%;
+            /* Make the image cover the entire width of the card */
+            /* height: 0; */
+            aspect-ratio: 16/9;
+            /* Set initial height to 0 */
+            /* padding-top: 56.25%; */
+            /* Maintain 16:9 aspect ratio */
+            object-fit: cover;
+            /* Ensure the image is covered within the card */
+        }
+
+        .videosbox p {
+            margin-top: 10px;
+            /* Add some spacing between the image and text */
+            font-size: 16px;
+            /* Adjust font size as needed */
+            line-height: 1.5;
+            /* Adjust line height for better readability */
+        }
+    </style>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0;
+        }
+
+        .side-nav {
+            width: 250px;
+            background-color: #fff;
+            /* color: #2e2e2e; */
+            color: #2b2b2b;
+            height: 100vh;
+            /* Full height of viewport */
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+            /* Enable scrolling if needed */
+        }
+
+        .logo-container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .slogan {
+            font-size: 16px;
+            font-weight: bold;
+
+        }
+
+        .nav-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 15px 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2b2b2b;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #13c200;
+            /* Change color on hover */
+        }
+
+        .main-container {
+            margin-left: 250px;
+            /* Same as side-nav width */
+        }
+
+        hr {
+            color: #2b2b2b;
+            width: 85%;
+            margin: 0 auto;
+            /* width: 2px !important; */
+        }
+    </style>
+    <style>
+        /* Add this CSS to your existing styles.css */
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(100% - 40px);
+            /* Width of each card, minus space between them */
+            margin-bottom: 20px;
+            margin: 5px auto;
+            /* Space between cards */
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+
+            padding: 10px;
+            /* Padding for content inside the card */
+        }
+
+        .dev-image {
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            /* margin-right: 15px; */
+        }
+
+        .dev-info {
+            flex: 1;
+        }
+
+        .card-title {
+            font-size: 12px;
+            color: #333;
+            /* margin-bottom: 5px; */
+        }
+
+        .card-subtitle {
+            font-size: 10px;
+            color: #777;
+        }
+        .dev-by{
+            text-align: center;
+            margin-top: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
     </style>
     <nav class="side-nav">
-
-        <img src="logo.jpeg" class="logo" alt="We Care">
-        <ul>
+        <div class="logo-container">
+            <img src="logo.jpeg" class="logo" alt="Wa3ini">
+            <h1 class="slogan">WA3INI</h1>
+        </div>
+        <hr>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">category 1</a></li>
-            <li><a href="services.html">category 2</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="category1.html">Autisme</a></li>
+            <li><a href="category2.html">Handicap moteur</a></li>
+            <li><a href="donate.html">Handicap visuel</a></li>
+            <li><a href="contact.html">Handicap auditif</a></li>
+            <li><a href="donate.html">handicap mental</a></li>
+            <hr>
 
-        </ul>
+            <li><a href="donate.html">Our Partners</a></li>
+            <li><a href="donate.html">Contact US</a></li>
+            <li><a href="donate.html">Donate!</a></li>
+
+        </ul><hr><h2 class="dev-by">Developped by</h2>
+        <div class="devs">
+            <div class="card">
+                <div class="card-content">
+                    <img src="images/ahmed_mas___.png" alt="Person 1" class="dev-image">
+                    <div class="dev-info">
+                        <h2 class="card-title">Ahmed Masmoudi</h2>
+                        <p class="card-subtitle">developper</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-content">
+                    <img src="images/youssef.jpg" alt="Person 3" class="dev-image">
+                    <div class="dev-info">
+                        <h2 class="card-title">Youssef neji</h2>
+                        <p class="card-subtitle">developper</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="images/aziz1.jpg" alt="Person 2" class="dev-image">
+                    <div class="dev-info">
+                        <h2 class="card-title">Aziz Mesfar</h2>
+                        <p class="card-subtitle">Content manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </nav>
 
     <div class="main-container">
@@ -43,29 +262,38 @@
             <section class="firstsection">
                 <div class="VideosContainer">
                     <div class="videosbox">
-                        <a href="https://www.youtube.com/watch?v=JlJF6wrTbnE&ab_channel=%D8%AA%D9%88%D8%B9%D9%8A%D8%A9%D8%AA%D9%8A%D9%88%D8%A8-taweiatube%D8%AF%2F%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D9%8AD.Abdelbaky"><img src="Images/1.png" ></a>
+                        <a
+                            href="https://www.youtube.com/watch?v=JlJF6wrTbnE&ab_channel=%D8%AA%D9%88%D8%B9%D9%8A%D8%A9%D8%AA%D9%8A%D9%88%D8%A8-taweiatube%D8%AF%2F%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D9%8AD.Abdelbaky"><img
+                                src="images/1.png"></a>
                         <p>لماذا سمي التوحد اضطرابًا وليس إعاقة أو مرض</p>
                     </div>
                     <div class="videosbox">
-                        <a href="https://www.youtube.com/watch?v=L4KWJKMPXg0"><img src="Images/2.jpg" ></a>
+                        <a href="https://www.youtube.com/watch?v=L4KWJKMPXg0"><img src="images/2.jpg"></a>
                         <p>الفرق بين التوحد والإعاقة الذهنية</p>
                     </div>
                     <div class="videosbox">
-                        <a href="https://www.youtube.com/watch?v=h5C7Zs9UVyc&ab_channel=Espitalia-%D8%A7%D9%84%D8%A7%D8%B3%D8%A8%D8%AA%D8%A7%D9%84%D9%8A%D8%A9"><img src="Images/3.jpg"></a>
+                        <a
+                            href="https://www.youtube.com/watch?v=h5C7Zs9UVyc&ab_channel=Espitalia-%D8%A7%D9%84%D8%A7%D8%B3%D8%A8%D8%AA%D8%A7%D9%84%D9%8A%D8%A9"><img
+                                src="images/3.jpg"></a>
                         <p>طيف التوحد | اضطراب عصبي أم عقل مختلف ؟ | الاسبتالية</p>
                     </div>
                     <div class="videosbox">
-                        <a href="https://www.youtube.com/watch?v=93PRRxy3-Eo&ab_channel=%D9%85%D9%88%D8%B9%D8%AF%D9%85%D8%B9%D8%AC%D9%84%D8%B3%D9%87"><img src="Images/4.png" ></a>
+                        <a
+                            href="https://www.youtube.com/watch?v=93PRRxy3-Eo&ab_channel=%D9%85%D9%88%D8%B9%D8%AF%D9%85%D8%B9%D8%AC%D9%84%D8%B3%D9%87"><img
+                                src="images/4.png"></a>
                         <p>الفرق بين التوحد والاعاقة العقلية وبعض المشاكل التي تصاحب التوحد</p>
                     </div>
                     <div class="videosbox">
-                        <a href="https://www.youtube.com/watch?v=opWfi7kE7bs&ab_channel=pediatricphysicaltherapy%D9%84%D9%84%D8%B9%D9%84%D8%A7%D8%AC%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A7%D9%84%D9%85%D9%83%D8%AB%D9%81"><img src="Images/5.jpg" ></a>
-                        <p>علاج طبيعي للتوحد | تعريف طيف التوحد , مرض التوحد و أسبابه | انواع التوحد و الفرق بينها | علاج طبيعي</p>
+                        <a
+                            href="https://www.youtube.com/watch?v=opWfi7kE7bs&ab_channel=pediatricphysicaltherapy%D9%84%D9%84%D8%B9%D9%84%D8%A7%D8%AC%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A7%D9%84%D9%85%D9%83%D8%AB%D9%81"><img
+                                src="images/5.jpg"></a>
+                        <p>علاج طبيعي للتوحد | تعريف طيف التوحد , مرض التوحد و أسبابه | انواع التوحد و الفرق بينها |
+                            علاج طبيعي</p>
                     </div>
                 </div>
-    </section>
+            </section>
 
-    </main>
+        </main>
     </div>
 </body>
 
